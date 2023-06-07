@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>My Daily Routine</h2>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Time</th>
+        <th>Task</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" id="task1" onchange="addConfetti(this)"><label for="task1"></label></td>
+        <td>10:00 AM</td>
+        <td>Meditation 🧘</td>
+        <td>20 mins</td>
+      </tr>
+      <!-- Rest of the table rows... -->
+      <tr>
+        <td><input type="checkbox" id="task17" onchange="addConfetti(this)"><label for="task17"></label></td>
+        <td>9:45 PM</td>
+        <td>Call Daddy 📞</td>
+        <td>15 mins</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script type="module">
+    import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+
+    function addConfetti(checkbox) {
+      if (checkbox.checked) {
+        confetti();
+        console.log("Confetti!");
+      }
+    }
+  </script>
+</body>
+</html>
+
