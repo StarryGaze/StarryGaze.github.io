@@ -21,16 +21,16 @@
 </head>
 <body>
   <h2>My Daily Routine</h2>
-  <>
-    <>
+  <table>
+    <thead>
       <>
         <></th>
         <th>Time</th>
-        <>Task</th>
+        <th>Task</th>
         <th>Duration</th>
       </tr>
     </thead>
-    <>
+    <tbody>
       <!-- Add tasks here -->
     </tbody>
   </table>
@@ -68,8 +68,8 @@
 
       row.innerHTML += `
         <td>${task.time}</td>
-        <td>${task.task}</td>
-        <>${task.duration}</td>
+        <>${task.task}</td>
+        <td>${task.duration}</td>
       `;
 
       tbody.appendChild(row);
