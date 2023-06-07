@@ -21,139 +21,65 @@
 </head>
 <body>
   <h2>My Daily Routine</h2>
-  <table>
-    <thead>
-      <tr>
-        <th></th>
+  <>
+    <>
+      <>
+        <></th>
         <th>Time</th>
-        <th>Task</th>
+        <>Task</th>
         <th>Duration</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td><input type="checkbox" id="task1" onchange="addConfetti(this)" /><label for="task1">Brush</label></td>
-        <td>6:00 AM</td>
-        <td>Brush</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task2" onchange="addConfetti(this)" /><label for="task2">Fruits, bread etc breakfast</label></td>
-        <td>6:15 AM</td>
-        <td>Fruits, bread etc breakfast</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task3" onchange="addConfetti(this)" /><label for="task3">Cold bath</label></td>
-        <td>6:30 AM</td>
-        <td>Cold bath</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task4" onchange="addConfetti(this)" /><label for="task4">Coffee face mask</label></td>
-        <td>7:00 AM</td>
-        <td>Coffee face mask</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task5" onchange="addConfetti(this)" /><label for="task5">Dance</label></td>
-        <td>7:30 AM</td>
-        <td>Dance</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task6" onchange="addConfetti(this)" /><label for="task6">Music</label></td>
-        <td>8:00 AM</td>
-        <td>Music</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task7" onchange="addConfetti(this)" /><label for="task7">Call Niki</label></td>
-        <td>8:30 AM</td>
-        <td>Call Niki</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task8" onchange="addConfetti(this)" /><label for="task8">Take some photos with Nanima</label></td>
-        <td>9:00 AM</td>
-        <td>Take some photos with Nanima</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task9" onchange="addConfetti(this)" /><label for="task9">Eat lunch</label></td>
-        <td>1:00 PM</td>
-        <td>Eat lunch</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task10" onchange="addConfetti(this)" /><label for="task10">Relax</label></td>
-        <td>2:00 PM</td>
-        <td>Relax</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task11" onchange="addConfetti(this)" /><label for="task11">Write some Korean diary and learn words</label></td>
-        <td>2:30 PM</td>
-        <td>Write some Korean diary and learn words</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task12" onchange="addConfetti(this)" /><label for="task12">Do Duolingo</label></td>
-        <td>3:00 PM</td>
-        <td>Do Duolingo</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task13" onchange="addConfetti(this)" /><label for="task13">Write holiday homework French</label></td>
-        <td>4:00 PM</td>
-        <td>Write holiday homework French</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task14" onchange="addConfetti(this)" /><label for="task14">Have afternoon snack and milk</label></td>
-        <td>5:00 PM</td>
-        <td>Have afternoon snack and milk</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task15" onchange="addConfetti(this)" /><label for="task15">Relax</label></td>
-        <td>5:15 PM</td>
-        <td>Relax</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task16" onchange="addConfetti(this)" /><label for="task16">Music</label></td>
-        <td>6:00 PM</td>
-        <td>Music</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task17" onchange="addConfetti(this)" /><label for="task17">Call Daddy 💕</label></td>
-        <td>6:30 PM</td>
-        <td>Call Daddy 💕</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task18" onchange="addConfetti(this)" /><label for="task18">Dinner</label></td>
-        <td>7:00 PM</td>
-        <td>Dinner</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task19" onchange="addConfetti(this)" /><label for="task19">Sleep</label></td>
-        <td>10:00 PM</td>
-        <td>Sleep</td>
-        <td></td>
-      </tr>
+    <>
+      <!-- Add tasks here -->
     </tbody>
   </table>
   
   <script type="module">
+    // Tasks data
+    const tasks = [
+      {time: "10:00 AM", task: "Brush", duration: "10 mins"},
+      {time: "10:15 AM", task: "Fruits, bread etc breakfast", duration: "15 mins"},
+      {time: "10:30 AM", task: "Cold bath", duration: "15 mins"},
+      // Add more tasks here
+    ];
+
+    const tbody = document.querySelector("tbody");
+
+    // Add tasks to table
+    tasks.forEach((task, index) => {
+      const row = document.createElement("tr");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = `task${index + 1}`;
+      checkbox.addEventListener("change", () => {
+        addConfetti(checkbox);
+        localStorage.setItem(checkbox.id, checkbox.checked);
+      });
+
+      // Load checkbox state from localStorage
+      if (localStorage.getItem(checkbox.id) === "true") {
+        checkbox.checked = true;
+      }
+
+      const taskCell = document.createElement("td");
+      taskCell.appendChild(checkbox);
+      row.appendChild(taskCell);
+
+      row.innerHTML += `
+        <td>${task.time}</td>
+        <td>${task.task}</td>
+        <>${task.duration}</td>
+      `;
+
+      tbody.appendChild(row);
+    });
+
     import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
     function addConfetti(checkbox) {
       if (checkbox.checked) {
-        confetti();
+        confetti({ zIndex: 10000 });
         console.log("Confetti!");
       }
     }
