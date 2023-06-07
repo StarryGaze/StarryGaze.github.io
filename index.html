@@ -1,66 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>I am Tiara and tis is my Daily Plan for Today</title>
-  <style>
-    /* Add your CSS styling here */
-    body {
-      font-family: Arial, sans-serif;
-      background-image: linear-gradient(to bottom, #fceabb, #f8b500);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-    }
-    h1 {
-      color: #333;
-    }
-    table {
-      border-collapse: collapse;
-      margin-top: 10px;
-      text-align: center;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    input[type="checkbox"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      border: 2px solid #999;
-      border-radius: 4px;
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-      cursor: pointer;
-      background-color: #fff;
-    }
-    
-    input[type="checkbox"]:checked {
-      background-color: #ff85c0;
-      border-color: #ff85c0;
-    }
-    input[type="checkbox"]:checked::before {
-      content: '\2714';
-      font-size: 16px;
-      color: #fff;
-      text-align: center;
-      line-height: 16px;
-      border-radius: 4px;
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-    }
-    label {
-      display: inline-block;
-      width: 100%;
+ 
+      
     }
     li.completed label {
       text-decoration: line-through;
@@ -85,47 +24,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="checkbox" id="task1" onchange="addConfetti(this)"><label for="task1"></label></td>
-        <td>10:00 AM</td>
-        <td>Brush &#x1F9B7;</td>
-        <td>10 mins</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task2" onchange="addConfetti(this)"><label for="task2"></label></td>
-        <td>10:30 AM</td>
-        <td>Fruits, bread, etc. breakfast &#x1F345;</td>
-        <td>20 mins</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task3" onchange="addConfetti(this)"><label for="task3"></label></td>
-        <td>11:00 AM</td>
-        <td>Cold bath &#x1F30A;</td>
-        <td>15 mins</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task4" onchange="addConfetti(this)"><label for="task4"></label></td>
-        <td>11:30 AM</td>
-        <td>Coffee face mask &#x2615;&#x1F633;</td>
-        <td>30 mins</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task5" onchange="addConfetti(this)"><label for="task5"></label></td>
-        <td>12:00 PM</td>
-        <td>Dance &#x1F483;</td>
-        <td>1 hour</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task6" onchange="addConfetti(this)"><label for="task6"></label></td>
-        <td>12:30 PM</td>
-        <td>Music &#x1F3B5;</td>
-        <td>45 mins</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task7" onchange="addConfetti(this)"><label for="task7"></label></td>
-        <td>1:00 PM</td>
-        <td>Call Niki &#x1F4DE;</td>
-        <td>20 mins</td>
-      </tr>
+
       <tr>
         <td><input type="checkbox" id="task8" onchange="addConfetti(this)"><label for="task8"></label></td>
         <td>1:30 PM</td>
@@ -148,47 +47,3 @@
         <td><input type="checkbox" id="task11" onchange="addConfetti(this)"><label for="task11"></label></td>
         <td>4:00 PM</td>
         <td>Write some Korean diary and learn words &#x1F4D6;&#x1F30E;</td>
-        <td>1 hour</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task12" onchange="addConfetti(this)"><label for="task12"></label></td>
-        <td>5:00 PM</td>
-        <td>Do Duolingo &#x1F3FA;</td>
-        <td>30 mins</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task13" onchange="addConfetti(this)"><label for="task13"></label></td>
-        <td>6:00 PM</td>
-        <td>Write holiday homework French &#x1F4D8;&#x1F30D;</td>
-        <td>1 hour</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task14" onchange="addConfetti(this)"><label for="task14"></label></td>
-        <td>7:00 PM</td>
-        <td>Have afternoon snack and milk &#x1F95D;&#x1F95B;</td>
-        <td>15 mins</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="task15" onchange="addConfetti(this)"><label for="task15"></label></td>
-        <td>8:00 PM</td>
-        <td>Sleep &#x1F6CC;</td>
-        <td>8 hours</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <script>
-    function addConfetti(checkbox) {
-      if (checkbox.checked) {
-        var confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        document.body.appendChild(confetti);
-        setTimeout(function() {
-          confetti.remove();
-        }, 3000);
-      }
-      localStorage.setItem(checkbox.id, checkbox.checked);
-    }
-  </script>
-</body>
-</html>
