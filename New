@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>My Daily Routine</h2>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Time</th>
+        <th>Task</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" id="task1" onchange="addConfetti(this)"><label for="task1"></label></td>
+        <td>10:00 AM</td>
+        <td>Meditation 🧘</td>
+        <td>20 mins</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task2" onchange="addConfetti(this)"><label for="task2"></label></td>
+        <td>10:30 AM</td>
+        <td>Yoga 🧘‍♀️</td>
+        <td>30 mins</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task3" onchange="addConfetti(this)"><label for="task3"></label></td>
+        <td>11:00 AM</td>
+        <td>Cold bath 🌊</td>
+        <td>15 mins</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task4" onchange="addConfetti(this)"><label for="task4"></label></td>
+        <td>11:30 AM</td>
+        <td>Coffee face mask ☕😳</td>
+        <td>30 mins</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task5" onchange="addConfetti(this)"><label for="task5"></label></td>
+        <td>12:00 PM</td>
+        <td>Dance 💃</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task6" onchange="addConfetti(this)"><label for="task6"></label></td>
+        <td>12:30 PM</td>
+        <td>Music 🎵</td>
+        <td>45 mins</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task7" onchange="addConfetti(this)"><label for="task7"></label></td>
+        <td>1:00 PM</td>
+        <td>Call Niki 📞</td>
+        <td>20 mins</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task8" onchange="addConfetti(this)"><label for="task8"></label></td>
+        <td>1:30 PM</td>
+        <td>Take some photos with Nanima 👫📸</td>
+        <td>30 mins</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task9" onchange="addConfetti(this)"><label for="task9"></label></td>
+        <td>2:00 PM</td>
+        <td>Lunch 🍽️</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task10" onchange="addConfetti(this)"><label for="task10"></label></td>
+        <td>3:00 PM</td>
+        <td>Read a book 📚</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task11" onchange="addConfetti(this)"><label for="task11"></label></td>
+        <td>4:00 PM</td>
+        <td>Painting 🎨</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task12" onchange="addConfetti(this)"><label for="task12"></label></td>
+        <td>5:00 PM</td>
+        <td>Play video games 🎮</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task13" onchange="addConfetti(this)"><label for="task13"></label></td>
+        <td>5:30 PM</td>
+        <td>Read a book 📚</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task14" onchange="addConfetti(this)"><label for="task14"></label></td>
+        <td>6:30 PM</td>
+        <td>Outdoor playtime 🎾</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task15" onchange="addConfetti(this)"><label for="task15"></label></td>
+        <td>7:30 PM</td>
+        <td>Watch a movie with family 🎥👨‍👩‍👧</td>
+        <td>2 hours</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task16" onchange="addConfetti(this)"><label for="task16"></label></td>
+        <td>9:30 PM</td>
+        <td>Brush and sleep 🚿😴</td>
+        <td>10 mins</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="task17" onchange="addConfetti(this)"><label for="task17"></label></td>
+        <td>9:45 PM</td>
+        <td>Call Daddy 📞</td>
+        <td>15 mins</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script type="module">
+    import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+
+    function addConfetti(checkbox) {
+      if (checkbox.checked) {
+        confetti();
+        console.log("Confetti!");
+      }
+    }
+  </script>
+</body>
+</html>
